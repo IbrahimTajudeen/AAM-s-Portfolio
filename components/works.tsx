@@ -1,3 +1,5 @@
+import Card from '@components/card';
+
 const projects = [
   {
     title: "Stonetech Corporate Website",
@@ -28,29 +30,23 @@ const projects = [
 
 export default function Works() {
   return (
-    <section id="work" className="py-20">
+    <section id="work" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-3xl font-bold mb-10">Selected Works</h2>
+        <h2 className="text-3xl text-center font-bold mb-5">Selected Works</h2>
+        <p className="max-w-2/4  mx-auto text-[20px] text-center text-black dark:text-black mb-5">
+          A collection of projects showcasing my approach to design, problem-solving, and user-centered thinking
+        </p>
+        <div className="mb-10 w-2/26 p-0.5 mx-auto bg-[slateblue] rounded-full"></div>
 
         <div className="grid md:grid-cols-2 gap-10">
           {projects.map((project, index) => (
-            <div
+            <Card 
               key={index}
-              className="p-6 border rounded-xl hover:shadow-lg transition"
-            >
-              <h3 className="text-xl font-semibold mb-3">
-                {project.title}
-              </h3>
-              <p className="text-gray-600 mb-4">
-                {project.description}
-              </p>
-              <a
-                href="#"
-                className="text-indigo-600 font-medium hover:underline"
-              >
-                View on Figma →
-              </a>
-            </div>
+              image="/hero-bg.png"
+              title={project.title}
+              description={project.description}
+              figmaUrl="#"
+            />
           ))}
         </div>
       </div>

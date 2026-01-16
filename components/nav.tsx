@@ -7,7 +7,7 @@ export default function Nav() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed w-full top-0 z-50 bg-white/80 backdrop-blur-md">
+    <header className="fixed w-full top-0 z-50 bg-white/80 backdrop-blur-[2px]">
       <nav className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
         
         {/* Logo */}
