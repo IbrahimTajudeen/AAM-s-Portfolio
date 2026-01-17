@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import AnimateIn from '@components/animate-in'
 
 export default function Hero() {
   return (
@@ -6,9 +7,11 @@ export default function Hero() {
       <div className='lg:pl-10 lg:pt-40 md:pl-6 md:pt-20 text-center md:text-left'>
         <p className="text-gray-500 mb-4">Hello, I'm</p>
 
-        <h1 className="text-5xl md:text-6xl font-serif font-bold leading-tight">
-          Ahmad Amin <br /> Mahmood
-        </h1>
+        <AnimateIn>
+          <h1 className="text-5xl md:text-6xl font-serif font-bold leading-tight">
+            Ahmad Amin <br /> Mahmood
+          </h1>
+        </AnimateIn>
 
         <p className="mt-2 text-gray-600 font-medium text-[20px]">
           UI/UX Designer · Product Designer
